@@ -13,7 +13,7 @@ const FullPageLoader = () => {
                 <span className={styles.loaderWord}>Fast Performance</span>
             </div>
         </div>
-        <div class="loader"></div>
+        <div className={styles.loader}></div>
     </div>
   )
 }

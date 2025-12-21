@@ -95,12 +95,12 @@
 .loader {
     width: 44.8px;
     height: 44.8px;
-    color: var(--theme-color-rgb);
+    color: var(--theme-text-color);
     position: relative;
     background: radial-gradient(11.2px,currentColor 94%,#0000);
   }
   
-  .loaderBefore {
+  .loader::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -125,7 +125,7 @@
       transform: rotate(90deg);
     }
   
-    10% {
+    100% {
       inset: 0;
       transform: rotate(90deg);
     }
@@ -141,7 +141,7 @@
     0% {
       transform: rotate(0deg);
     }
-    10% {
+    100% {
       transform: rotate(360deg);
     }
   }      
