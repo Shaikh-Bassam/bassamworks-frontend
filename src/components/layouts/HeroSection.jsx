@@ -1,7 +1,7 @@
 import React from "react";
-import PrimaryButtom from "./buttons/PrimaryButtom";
-import SecondaryButton from "./buttons/SecondaryButton";
-import FloatingBadge from "./FloatingBadge";
+import PrimaryButtom from "../common/buttons/PrimaryButtom";
+import SecondaryButton from "../common/buttons/SecondaryButton";
+import FloatingBadge from "../common/FloatingBadge";
 import { BRAND } from "../../config/branding";
 
 export default function HeroSection() {

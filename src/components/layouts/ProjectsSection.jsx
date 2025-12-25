@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../common/ProjectCard";
 import { useProjects } from "../../api/project";
 
 export default function ProjectsSection() {
