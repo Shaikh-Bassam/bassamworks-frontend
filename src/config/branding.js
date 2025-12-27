@@ -6,3 +6,5 @@ export const BRAND = {
   experience: 2,
   projects: 3,
 };
+
+export default BRAND;

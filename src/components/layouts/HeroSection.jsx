@@ -3,86 +3,94 @@ import PrimaryButtom from "../common/buttons/PrimaryButtom";
 import SecondaryButton from "../common/buttons/SecondaryButton";
 import FloatingBadge from "../common/FloatingBadge";
 import { BRAND } from "../../config/branding";
+import BorderButton from "../common/buttons/BorderButton";
+import Active from "../common/status/Active";
 
 export default function HeroSection() {
   return (
-    <section class="w-full px-4 md:px-10 max-w-[1440px] mx-auto mb-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+    <section className="w-full px-4 md:px-10 max-w-[1440px] mx-auto mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
         {/* <!-- Left Column: Text --> */}
-        <div class="flex flex-col justify-center gap-8">
+        <div className="flex flex-col justify-center gap-8">
           {/* <!-- Badge --> */}
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="text-xs font-medium text-gray-300 tracking-wide uppercase">Available for new
+          {/* <div
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="text-xs font-medium text-gray-300 tracking-wide uppercase">Available for new
               projects</span>
-          </div>
+          </div> */}
+          <BorderButton className="flex items-center gap-2">
+            <Active />
+            <span>
+              AVAILABLE FOR NEW PROJECTS
+            </span>
+          </BorderButton>
           {/* <!-- Headline --> */}
-          <div class="space-y-4">
+          <div className="space-y-4">
             <h1
-              class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white">
-              Building <span class="text-gradient">scalable</span> web apps for the future.
+              className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white">
+              Building <span className="text-gradient">scalable</span> web apps for the future.
             </h1>
-            <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+            <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
               Full-Stack Engineer specialized in Laravel &amp; React. I turn complex problems into
               elegant, high-performance interfaces for next-gen startups.
             </p>
           </div>
           {/* <!-- CTA Actions --> */}
-          <div class="flex flex-wrap gap-4 pt-2">
+          <div className="flex flex-wrap gap-4 pt-2">
             <PrimaryButtom>
               <span>View Projects</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </PrimaryButtom>
             <SecondaryButton>
-              <span class="material-symbols-outlined text-[20px]">download</span>
+              <span className="material-symbols-outlined text-[20px]">download</span>
               <span>Download CV</span>
             </SecondaryButton>
           </div>
           {/* <!-- Stats (Integrated) --> */}
-          <div class="flex gap-8 pt-8 border-t border-white/5 mt-4">
+          <div className="flex gap-8 pt-8 border-t border-white/5 mt-4">
             <div>
-              <p class="text-3xl font-bold text-white">{BRAND.experience}+</p>
-              <p class="text-sm text-gray-500 font-medium">Years Experience</p>
+              <p className="text-3xl font-bold text-white">{BRAND.experience}+</p>
+              <p className="text-sm text-gray-500 font-medium">Years Experience</p>
             </div>
-            <div class="w-px h-12 bg-white/10"></div>
+            <div className="w-px h-12 bg-white/10"></div>
             <div>
-              <p class="text-3xl font-bold text-white">{BRAND.projects}+</p>
-              <p class="text-sm text-gray-500 font-medium">Products Launched</p>
+              <p className="text-3xl font-bold text-white">{BRAND.projects}+</p>
+              <p className="text-sm text-gray-500 font-medium">Products Launched</p>
             </div>
-            <div class="w-px h-12 bg-white/10"></div>
+            <div className="w-px h-12 bg-white/10"></div>
             <div>
-              <p class="text-3xl font-bold text-white">100%</p>
-              <p class="text-sm text-gray-500 font-medium">Client Satisfaction</p>
+              <p className="text-3xl font-bold text-white">100%</p>
+              <p className="text-sm text-gray-500 font-medium">Client Satisfaction</p>
             </div>
           </div>
         </div>
         {/* <!-- Right Column: Visual --> */}
-        <div class="relative h-full flex items-center justify-center lg:justify-end">
+        <div className="relative h-full flex items-center justify-center lg:justify-end">
           {/* <!-- Abstract Background Glow --> */}
           <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none">
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none">
           </div>
           {/* <!-- Main Visual Card --> */}
           <div
-            class="relative z-10 w-full max-w-md aspect-[4/3] bg-background-dark border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/50 group hover:border-white/20 transition-colors duration-500">
+            className="relative z-10 w-full max-w-md aspect-[4/3] bg-background-dark border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/50 group hover:border-white/20 transition-colors duration-500">
             {/* <!-- Code Editor Header --> */}
-            <div class="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/5">
-              <div class="flex gap-1.5">
-                <div class="size-3 rounded-full bg-red-500/80"></div>
-                <div class="size-3 rounded-full bg-yellow-500/80"></div>
-                <div class="size-3 rounded-full bg-green-500/80"></div>
+            <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/5">
+              <div className="flex gap-1.5">
+                <div className="size-3 rounded-full bg-red-500/80"></div>
+                <div className="size-3 rounded-full bg-yellow-500/80"></div>
+                <div className="size-3 rounded-full bg-green-500/80"></div>
               </div>
-              <div class="mx-auto text-xs font-mono text-gray-500">App.jsx</div>
+              <div className="mx-auto text-xs font-mono text-gray-500">App.jsx</div>
             </div>
             {/* <!-- Image Content --> */}
             <div
-              class="w-full h-full relative group-hover:scale-105 transition-transform duration-700 ease-out">
+              className="w-full h-full relative group-hover:scale-105 transition-transform duration-700 ease-out">
               <img alt="Abstract dark code interface on a computer screen displaying syntax highlighting"
-                class="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover opacity-80"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOIzU40bDOUUsJSaX4hsGvve7pc7SyidasVY2H2lC2XS8qePNcvOMpd7NotovXgoR55KJezcKqaLYvJFq25TkffSSqYrJR7VTQBO0NfG2Pfn439j296YTp2AyX902Vv2414cCCNdm2l_JhcKNoSDliIoHI-UoEozcvaIljkV2jD_F0x-NhSd8ie8TECo5Kuv_f2XqoHPMoLMT4LKCWr3vLzXx6TgMJ8UkIIf4uZRuyjwyfIsbwTVAiRbJOpq79wh7qDYD2ep0" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
               </div>
 
               {/* <!-- Floating Tech Badge 1 --> */}

@@ -11,8 +11,15 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
   --theme-text-color: #99a1af;
+  --theme-bg-gradient: color-mix(in oklab, var(--color-indigo-500) 20%, transparent);
+  --link-color: #258cf4;
 }
 
 body {
   font-family: var(--font-display);
+}
+
+
+button:not(:disabled) {
+  cursor: pointer;
 }

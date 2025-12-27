@@ -1,17 +1,16 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Menu from './menu'
-import useMenu from '../../hooks/useMenu';
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
-  const menu = useMenu();
   return (
 
     <>
-      <Navbar {...menu}/>
-      <Menu {...menu}/>
+      <Navbar />
+      <Menu />
       {children}
-
+      <Footer/>
     </>
   )
 }
