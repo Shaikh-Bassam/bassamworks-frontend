@@ -9,12 +9,12 @@
   /* margin: auto 0; */
   z-index: 50;
   /* transition:
-    all 0.7s ease-in-out; */
+  all 0.7s ease-in-out; */
+  pointer-events: none;
 }
 
 .menuContainer:has(.menuContentsOpen) {
   transform: translate(0px, 0px);
-  pointer-events: none;
 }
 
 /* .menuContainer:has(.menuContentsClosed) {
@@ -167,7 +167,7 @@
   overflow: hidden;
   transition: transform 0.8s cubic-bezier(0.43, 0.05, 0.17, 1);
   line-height: 1;
-  font-family: "Six Caps",sans-serif;
+  font-family: "Six Caps", sans-serif;
   letter-spacing: 0.002em;
   font-weight: 500;
   text-transform: uppercase;

@@ -3,10 +3,18 @@ import React from 'react';
 import useMenu from '../../../hooks/useMenu';
 import styles from './menu.module.css';
 import BRAND from '../../../config/branding';
+import { useNavigate } from 'react-router-dom';
 
 const Menu = () => {
     const { isOpen, isDisabled, toggleMenu } = useMenu();
+    const navigate = useNavigate();
     const menuItems = [
+        {
+            title: 'Who I AM',
+            desc: 'Who I am, what I do, and how I think about building products',
+            img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=360&h=360&fit=crop',
+            href: '/about'
+        },
         {
             title: 'M-TRUST',
             desc: 'M-TRUST IS A COMPANY WITH HIGH-SKILLED PROFESSIONALS WHO SOLVE SOCIAL ISSUES FROM THE REAL ESTATE BUSINESS',
@@ -59,7 +67,9 @@ const Menu = () => {
                     <div className={`${styles.menuContents} ${isOpen ? styles.menuContentsOpen : styles.menuContentsClosed} ${styles.scrollbar}`}>
                         {/* Title */}
                         <div className={styles.title}>
-                            <div className={styles.animatedtext}>
+                            <div onClick={() => {
+                                navigate("/");
+                            }} className={styles.animatedtext}>
                                 <div
                                     className={styles.titleBlock}
                                     style={{
@@ -107,7 +117,12 @@ const Menu = () => {
                                             transitionDelay: isOpen ? `${0.1 * (index + 7)}s` : '0s'
                                         }}
                                     >
-                                        <button className={styles.menuItemButton}>
+                                        <button className={styles.menuItemButton}
+                                            onClick={() => {
+                                                toggleMenu();
+                                                navigate(item.href);
+                                            }}
+                                        >
                                             <span className={styles.menuItemImgWrapper}>
                                                 <img src={item.img} alt={item.title} className={styles.menuItemImg} />
                                             </span>
@@ -131,10 +146,10 @@ const Menu = () => {
                     onClick={toggleMenu}
                 >
                     {/* <span className={styles.hamburgerInner}> */}
-                        <span className={styles.hamburgerLines}>
-                            <span className={`${styles.line} ${isOpen ? styles.lineTopOpen : styles.lineTopClosed}`}></span>
-                            <span className={`${styles.line} ${isOpen ? styles.lineBottomOpen : styles.lineBottomClosed}`}></span>
-                        </span>
+                    <span className={styles.hamburgerLines}>
+                        <span className={`${styles.line} ${isOpen ? styles.lineTopOpen : styles.lineTopClosed}`}></span>
+                        <span className={`${styles.line} ${isOpen ? styles.lineBottomOpen : styles.lineBottomClosed}`}></span>
+                    </span>
                     {/* </span> */}
                 </button>
             </div>

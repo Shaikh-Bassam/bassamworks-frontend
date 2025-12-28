@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Logo from '../branding/Logo'
 import BRAND from '../../config/branding'
 import Active from '../common/status/Active'
 import BorderButton from '../common/buttons/BorderButton'
 import GradientLine from '../common/GradientLine'
+import Icon from '../branding/Icon'
 
 const Footer = () => {
     const socials = [
@@ -20,9 +21,7 @@ const Footer = () => {
                     {/* Left Column: Branding & Identity */}
                     <div className="md:col-span-4 flex flex-col gap-6">
                         <div className="flex items-center gap-3 group/brand cursor-pointer">
-                            <div className="size-10 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20 group-hover/brand:scale-105 transition-transform duration-300">
-                                <span className="material-symbols-outlined text-white text-2xl font-bold">terminal</span>
-                            </div>
+                            <Icon/>
                             <div className="flex flex-col">
                                 <span className="text-xl font-bold tracking-tight leading-none text-slate-900 dark:text-white">
                                     <Logo />
@@ -63,8 +62,8 @@ const Footer = () => {
                                     </a>
                                 </nav>
                             </div>
-                            <BorderButton className="block p-4 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 max-w-xs">
-                                <p className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">Status</p>
+                            <BorderButton direction='column' justify='start' align='start' className="block p-4 max-w-xs">
+                                <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Status</p>
                                 <div className="flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
                                     <Active />
                                     Open to new opportunities
@@ -79,16 +78,22 @@ const Footer = () => {
                             <div className="flex flex-wrap gap-3">
                                 {
                                     socials.map((social, index) => (
-                                        <BorderButton aria-label={social.name} className="group relative size-12 rounded-xl bg-slate-100 dark:bg-[#1a1d21] text-slate-600 dark:text-[#9cabba] hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all duration-300 flex items-center justify-center border border-transparent dark:border-white/5 hover:shadow-lg hover:shadow-primary/30" href="#">
-                                            <span className="material-symbols-outlined text-2xl transition-transform group-hover:scale-110">{social.icon}</span>
-                                        </BorderButton>
-
+                                        <Fragment key={index}>
+                                            <BorderButton
+                                                aria-label={social.name}
+                                                size="lg"
+                                                href="#">
+                                                <span className="material-symbols-outlined text-2xl transition-transform group-hover:scale-110">{social.icon}</span>
+                                            </BorderButton>
+                                        </Fragment>
                                     ))
                                 }
                             </div>
                         </div>
                         <div className="mt-auto w-full flex justify-start md:justify-end pt-8 md:pt-0">
-                            <BorderButton className="group flex min-w-[140px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white gap-3 text-sm font-bold leading-normal tracking-wide text-white transition-all duration-300 border border-slate-200 dark:border-white/10 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/25" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                            <BorderButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+                                size='xl'
+                                className="group transition-all duration-300 border border-slate-200 dark:border-white/10 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/25">
                                 <span className="truncate">Back to Top</span>
                                 <span className="material-symbols-outlined text-xl group-hover:-translate-y-1 transition-transform">arrow_upward</span>
                             </BorderButton>
