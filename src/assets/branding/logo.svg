@@ -1,0 +1,5 @@
+<svg class="size-6 text-primary transform transition-transform duration-500 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 6H13L11 9H2L4 6Z"></path>
+    <path d="M4 11H22L20 14H2L4 11Z"></path>
+    <path d="M13 16H22L20 19H11L13 16Z"></path>
+</svg>

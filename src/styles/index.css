@@ -1,0 +1,27 @@
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #ffffff, #9ca3af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #141414 0%, #191919 100%);
+}
+
+.glass-nav {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(12px);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
