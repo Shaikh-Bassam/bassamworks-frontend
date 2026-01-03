@@ -1,6 +1,6 @@
 import React from 'react';
 import brandLogo from '../../assets/branding/logo.svg';
-import styles from './Icon.module.css';
+import styles from './icon.module.css';
 
 const Icon = ({
   size = 'md',      // sm | md | lg
