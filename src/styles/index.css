@@ -1,27 +1,132 @@
-.bg-primary {
-    background-color: var(--color-primary);
+.hsmkrt-shell {
+    isolation: isolate;
 }
 
-.text-primary {
-    color: var(--color-primary);
+.hsmkrt-grid-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(16, 17, 20, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, 0.04) 1px, transparent 1px);
+    background-size: 90px 90px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 80%);
+    opacity: 0.3;
 }
 
-.text-gradient {
-    background: linear-gradient(to right, #ffffff, #9ca3af);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.hsmkrt-orb {
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+    animation: hsmkrt-float 14s ease-in-out infinite;
 }
 
-.bg-gradient-dark {
-    background: linear-gradient(135deg, #141414 0%, #191919 100%);
+.hsmkrt-orb--blue {
+    top: -7rem;
+    left: -10rem;
+    width: 34rem;
+    height: 34rem;
+    background: radial-gradient(circle, rgba(88, 167, 255, 0.9) 0%, rgba(88, 167, 255, 0.55) 54%, rgba(88, 167, 255, 0.18) 100%);
 }
 
-.glass-nav {
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(12px);
+.hsmkrt-orb--yellow {
+    top: 4rem;
+    right: -8rem;
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(circle, rgba(255, 215, 79, 0.95) 0%, rgba(255, 215, 79, 0.46) 58%, rgba(255, 215, 79, 0.12) 100%);
+    animation-delay: -4s;
 }
 
-.text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+.hsmkrt-orb--about {
+    top: auto;
+    bottom: -8rem;
+    right: -12rem;
+}
+
+.hsmkrt-title {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+}
+
+.hsmkrt-poster {
+    transform: rotate(-1.75deg);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.hsmkrt-poster:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.hsmkrt-floating-card {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(17, 18, 23, 0.55);
+    padding: 0.6rem;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+    animation: hsmkrt-drift 8s ease-in-out infinite;
+}
+
+.hsmkrt-floating-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hsmkrt-floating-card--click {
+    animation-delay: -2s;
+}
+
+.hsmkrt-floating-card--hold {
+    animation-delay: -4s;
+}
+
+.hsmkrt-marquee {
+    mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+
+.hsmkrt-marquee-track {
+    animation: hsmkrt-marquee 24s linear infinite;
+}
+
+.hsmkrt-project-card {
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.hsmkrt-project-card:hover {
+    transform: translateY(-8px) rotate(-0.5deg);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+}
+
+@keyframes hsmkrt-float {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, 20px, 0) scale(1.03);
+    }
+}
+
+@keyframes hsmkrt-drift {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(0, -8px, 0) rotate(6deg);
+    }
+}
+
+@keyframes hsmkrt-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
