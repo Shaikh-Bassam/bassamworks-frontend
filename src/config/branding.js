@@ -4,7 +4,7 @@ export const BRAND = {
   second: "Works",
   expertise: "Full-Stack Engineer",
   experience: 2,
-  projects: 3,
+  projects: 12,
 };
 
 export default BRAND;
