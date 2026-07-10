@@ -1,12 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
   --color-primary: #101114;
   --color-background-light: #f6f3ec;
   --color-background-dark: #080d16;
-  --font-display: "Inter", "Segoe UI", sans-serif;
-  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* BassamWorks palette */
+  --color-bw-cream: #f1eadd;
+  --color-bw-ink: #16130d;
+  --color-bw-blue: #4d7ff0;
+  --color-bw-blue-soft: #6f9bf2;
+  --color-bw-blue-deep: #2f5fcc;
+  --color-bw-yellow: #f4be2c;
+  --color-bw-yellow-soft: #fbd24e;
+  --color-bw-yellow-deep: #9a7400;
+  --color-bw-pink: #f49ab0;
+  --color-bw-green: #2fa86a;
+  --color-bw-muted: #4a4538;
+  --color-bw-muted-2: #5a5446;
+  --color-bw-muted-3: #8a8474;
+
+  --font-display: "Archivo", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --radius-default: 4px;
   --radius-lg: 8px;
   --radius-xl: 16px;
@@ -49,20 +68,14 @@ body {
   min-height: 100dvh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background:
-    radial-gradient(circle at top left, rgba(88, 167, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 90% 12%, rgba(255, 215, 79, 0.16), transparent 26%),
-    linear-gradient(180deg, #f6f1e8 0%, #f4efe5 36%, #efe9de 100%);
-  color: var(--color-primary);
+  background: var(--color-bw-cream);
+  color: var(--color-bw-ink);
   transition: background 300ms ease, color 300ms ease;
 }
 
 [data-theme="dark"] body {
-  background:
-    radial-gradient(circle at top left, rgba(52, 117, 198, 0.26), transparent 36%),
-    radial-gradient(circle at 90% 12%, rgba(155, 126, 32, 0.22), transparent 24%),
-    linear-gradient(180deg, #070b13 0%, #0a101a 36%, #0a0f1a 100%);
-  color: #f4f7ff;
+  background: var(--color-bw-ink);
+  color: var(--color-bw-cream);
 }
 
 ::selection {

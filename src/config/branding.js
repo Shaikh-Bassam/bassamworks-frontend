@@ -3,7 +3,7 @@ export const BRAND = {
   first: "Bassam",
   second: "Works",
   expertise: "Full-Stack Engineer",
-  experience: 2,
+  experience: 3,
   projects: 12,
 };
 
