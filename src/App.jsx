@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { publicRoutes } from "./routes/appRoutes";
 import "./index.css";
 import "./styles/index.css";
+import "./styles/bassamworks.css";
 import { useInitialLoader } from "./hooks/useInitialLoader";
 import FullPageLoader from "./components/loaders/FullPageLoader";
 import Layout from "./components/layouts";
