@@ -1,16 +1,24 @@
-# React + Vite
+# bassamWorks frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single-page portfolio for Shaikh Bassam — React 19, Vite and Tailwind CSS 4.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build in dist/
+npm run lint
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Where to edit
 
-## React Compiler
+| File | Content |
+| --- | --- |
+| `src/portfolio/Portfolio.jsx` | Hero, about copy, projects, contact section |
+| `src/portfolio/Opening.jsx` | Intro counter, name reveal, year, timing |
+| `src/portfolio/portfolio.css` | Layout, colours, responsive styles, keyframes |
+| `src/portfolio/ui/dialog.jsx` | Radix dialog used for the About and project panels |
+| `public/fonts/` | Six Caps + Space Grotesk (OFL licences alongside) |
+| `public/images/` | Project images |
+| `index.html` | Page title, description, favicon |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Intro timing lives in two places: the CSS animation delays and the `7240` / `8240` ms callbacks in `Opening.jsx`. Change them together.
