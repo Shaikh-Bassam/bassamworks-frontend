@@ -47,7 +47,7 @@ export default function Opening({ onReveal, onComplete }) {
   <div className="opening-odometer" aria-label="Opening portfolio" role="status"><div className="counter-clip" aria-hidden="true"><div className="counter-first"><span>0</span><span>1</span></div></div><div className="counter-clip" aria-hidden="true"><div className="counter-second">{'0123456789'.split('').map((n, i) => <span key={i}>{n}</span>)}</div><span className="counter-zero">0</span></div><div className="counter-clip" aria-hidden="true"><div className="counter-third">{'01234567890123456789'.split('').map((n, i) => <span key={i}>{n}</span>)}</div><span className="counter-zero">0</span></div><span className="counter-percent" aria-hidden="true">%</span></div>
   <div className="opening-streak streak-top" aria-hidden="true"/><div className="opening-streak streak-bottom" aria-hidden="true"/><div className="opening-ring" aria-hidden="true"/>
   <div className="opening-name" aria-label="Shaikh Bassam">{'SHAIKHBASSAM'.split('').map((letter, i) => <span key={i} style={{ '--letter': i }}>{letter}</span>)}</div>
-  <div className="opening-folio">PORTFOLIO 2026</div>
+  <div className="opening-folio">FULL STACK DEVELOPER</div>
   <button className="skip-opening" onClick={skip}>SKIP INTRO ↗</button>
  </div>;
 }
